@@ -13,10 +13,14 @@ const Pokemones = () => {
     const pokemones = useSelector(store => store.pokemones.array)
 
     return (
-        <div>
-            Lista de pokemones
-            <button onClick={() => dispatch( obtenerPokemonesAccion() )}>Mostrar Pokemones</button>
-            <button onClick={() => dispatch( SiguientePaginaPoke(20) )}>Siguiente </button>
+        <div className="container">
+
+        <div className="p-3 mb-2 bg-info text-white text-center">
+            <h4>Lista de pokemones</h4>
+        </div>
+
+            <button className="btn btn-success m-2" onClick={() => dispatch( obtenerPokemonesAccion() )}>Mostrar Pokemones</button>
+            <button className="btn btn-success m-2"onClick={() => dispatch( SiguientePaginaPoke(20) )}>Siguiente </button>
             <ul>
                 {
                     pokemones.map(item => (
