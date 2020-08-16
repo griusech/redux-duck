@@ -27,7 +27,7 @@ export default function pokeReducer(state = dataInicial, action) {
 // Acciones
 export const obtenerPokemonesAccion = () => async (dispatch, getState) => {
     try {
-        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
+        const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20&offset=200')
         dispatch({
             type: OBTENER_POKE_EXITO,
             payload: res.data.results
