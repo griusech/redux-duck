@@ -17,6 +17,9 @@ export default function pokeReducer(state = dataInicial, action) {
                 ...state,
                 array: action.payload
             }
+
+            default:
+                return state
     }
 }
 
