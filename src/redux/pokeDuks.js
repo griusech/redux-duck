@@ -25,8 +25,7 @@ export default function pokeReducer(state = dataInicial, action) {
                 array: action.payload.array, 
                 offset: action.payload.offset
             }
-
-
+            
             default:
                 return state
     }
